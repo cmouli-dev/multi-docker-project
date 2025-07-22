@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Find the FIBONACI value based on given index
+            Find the FIBONACI value based on given Index
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
