@@ -16,13 +16,13 @@ services:
       - PGDATABASE=$PGDATABASE
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
-    worker:
-      image: "chandra34/multi-worker"
-      mem_limit: 128m
-      environment:
-        - REDIS_HOST=$REDIS_HOST
-        - REDIS_PORT=$REDIS_PORT
-    nginx:
+  worker:
+    image: "chandra34/multi-worker"
+    mem_limit: 128m
+    environment:
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+  nginx:
       image: "chandra34/multi-nginx"
       mem_limit: 128m
       hostname: nginx
