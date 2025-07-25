@@ -19,12 +19,13 @@ services:
   worker:
     image: "chandra34/multi-worker"
     mem_limit: 128m
+    hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-      image: "chandra34/multi-nginx"
-      mem_limit: 128m
-      hostname: nginx
-      ports:
-        - "80:80"
+    image: "chandra34/multi-nginx"
+    mem_limit: 128m
+    hostname: nginx
+    ports:
+      - "80:80"
